@@ -1,0 +1,35 @@
+.circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: turquoise;
+  animation: move-the-circle 1s infinite;
+  transform-origin: center center;
+}
+
+@for $num from 1 through 8 {
+  .circle:nth-child(#{$num}) {
+    left: ($num - 1) * 40px;
+    animation-delay: $num * .3s;
+  }
+}
+
+@keyframes move-the-circle {
+  0% {
+    transform: translate(0, 0) scale(0.4);
+    opacity: 1;
+    background-color: turquoise;
+  }
+  50% {
+    transform: translate(0, 50px) scale(2);
+    opacity: .5;
+    background-color: blue;
+    border-radius: 0;
+  }
+  100% {
+    transform: translate(0, 0) scale(0.4);
+    opacity: 1;
+    background-color: turquoise;
+  }
+}

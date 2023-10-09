@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="first">
+      <div id="waveform"></div>
+      <div>
+        <label>
+          Zoom: <input type="range" min="0" max="50" value="10" />
+        </label>
+
+
+        <div class="buttons">
+          <button id="zoomIn">Zoom In</button>
+          <button id="zoomOut">Zoom OUT</button>
+          <button id="backward">Backward 5s</button>
+          <button id="forward">Forward 5s</button>
+          <p id="time"></p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="animation-wrapper ma-lg">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
