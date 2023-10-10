@@ -8,7 +8,7 @@
   transform-origin: center center;
 }
 
-@for $num from 1 through 8 {
+@for $num from 1 through 12 {
   .circle:nth-child(#{$num}) {
     left: ($num - 1) * 40px;
     animation-delay: $num * .3s;
@@ -67,13 +67,16 @@
 
 @keyframes animate {
   0%{
-    transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1.2);
+    opacity: 0.5;
   }
   50%{
     transform: rotate(180deg) translate(10px, 10px) scale(0.3);
+    opacity: 1;
   }
   100%{
-    transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1.2);
+    opacity: 0.5;
   }
 }
 
@@ -113,12 +116,15 @@
 @keyframes animate2 {
   0%{
     transform: rotate(360deg) scale(0.3);
+    opacity: 1;
   }
   50%{
-    transform: rotate(180deg) translate(-10px, -10px) scale(1);
+    transform: rotate(180deg) translate(-10px, -10px) scale(1.5);
+    opacity: 0.5;
   }
   100%{
     transform: rotate(0deg) scale(0.3);
+    opacity: 1;
   }
 }
 
@@ -146,3 +152,58 @@
   0 0 20px #00f, 0 0 50px #00f;
 }
 
+// --------third animation ----- //
+
+.anim3 {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 400px;
+  background: gray;
+}
+
+.box {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: repeating-conic-gradient(from var(--a), #ff2222 0%, #ff2222 5%, transparent 5%, transparent 40%, #ff2222 50%);
+  animation: anim-border 4s linear infinite;
+  border-radius: 20px;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes anim-border {
+  0% {
+    --a: 0deg
+  }
+  100% {
+    --a: 360deg
+  }
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(from var(--a), #2222ff 0%, #2222ff 5%, transparent 5%, transparent 40%, #2222ff 50%);
+  animation: anim-border 4s linear infinite;
+  animation-delay: -1s;
+  border-radius: 20px;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  background: #555;
+  border-radius: 15px;
+  border: 8px solid gray;
+}

@@ -94,7 +94,8 @@ button:focus-visible {
 }
 
 .ma-lg {
-  margin: 100px;
+  margin: 150px;
+
 }
 
 @media (prefers-color-scheme: light) {
