@@ -17,27 +17,27 @@
 }
 
 .circle:nth-child(3) {
-  animation: move3 1.4s infinite;
+  animation: move3 2s infinite;
 }
 
 .circle:nth-child(4) {
-  animation: move4 1.8s infinite;
+  animation: move4 1s infinite;
 }
 
 .circle:nth-child(5) {
-  animation: move5 1s infinite;
+  animation: move5 2s infinite;
 }
 
 .circle:nth-child(6) {
-  animation: move6 1.5s infinite;
+  animation: move6 1s infinite;
 }
 
 .circle:nth-child(7) {
-  animation: move7 1.5s infinite;
+  animation: move7 1s infinite;
 }
 
 .circle:nth-child(8) {
-  animation: move3 1s infinite;
+  animation: move3 2s infinite;
 }
 
 .circle:nth-child(9) {
@@ -49,12 +49,11 @@
 }
 
 .circle:nth-child(11) {
-  animation: move5 1.4s infinite;
+  animation: move5 2s infinite;
 }
 
 .circle:nth-child(12) {
   animation: move12 2s infinite;
-  animation-delay: 0 !important;
 }
 
 @for $num from 1 through 12 {
