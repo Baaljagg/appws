@@ -38,7 +38,7 @@ h1 {
 }
 
 #app {
-  max-width: 1920px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -63,6 +63,10 @@ h1 {
 
 .read-the-docs {
   color: #888;
+}
+
+.first {
+  max-width: 500px !important;
 }
 
 button {
